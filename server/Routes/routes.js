@@ -1,35 +1,31 @@
 import { Router } from 'express';
-import controller from '../Controllers/controller';
+import questionController from '../Controllers/questionController';
+import answerController from '../Controllers/answerController';
 
 const router = Router();
 
-
-// GET SPECIFIC QUESTION DOCUMENT WHEN QUESTION ID IS AVAILABLE
-router.param('qID', controller.routerParam);
-
-
 // GET ALL QUESTIONS
-router.get('/', controller.getAllQuestion);
+router.get('/', questionController.getAllQuestion);
 
 
 // GET SPECIFIC QUESTION ID
-router.get('/:qID', controller.getAQuestion);
+router.get('/:qID', questionController.getAQuestion);
 
 
 // POST A QUESTION
-router.post('/', controller.postAQuestion);
+router.post('/', questionController.postAQuestion);
 
 
 // POST AN ASNWER
-router.post('/:qID/answers', controller.postAnAnswer);
+router.post('/:qID/answers', answerController.postAnAnswer);
 
 // GET SPECIFIC ANSWER
-router.get('/:qID/answers/:aID', controller.getAnAnswer);
+router.get('/:qID/answers/:aID', answerController.getAnAnswer);
 
 // GET ALL ANSWERS FOR A QUESTION
-router.get('/:qID/answers', controller.getAllAnswer);
+router.get('/:qID/answers', answerController.getAllAnswer);
 
 // DELETE A SPECIFIC QUESTION
-router.delete('/:qID', controller.deleteAQuestion);
+router.delete('/:qID', questionController.deleteAQuestion);
 
 export default router;

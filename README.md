@@ -16,3 +16,4 @@ After cloning the repo run on your node cli
 
 #Using Postman test every endpoint
 key: Content-Type value: application/json
+
