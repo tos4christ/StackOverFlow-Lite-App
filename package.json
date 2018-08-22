@@ -19,7 +19,7 @@
     },
     "scripts": {
         "build": "babel server -d build",
-        "test": "nyc mocha build/test/test.js",
+        "test": "nyc mocha build/test/test.js --exit",
         "coverage": "nyc report --reporter=text-lcov | coveralls",
         "start": "npm run build"
     },
