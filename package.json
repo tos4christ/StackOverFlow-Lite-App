@@ -19,8 +19,8 @@
     "rimraf": "^2.6.2"
   },
   "scripts": {
-    "test": "mocha",
-    "build": "babel app -d build && mocha build/test"
+    "build": "babel app -d build",
+    "test": "mocha build/test"
   },
   "author": "",
   "license": "ISC"
