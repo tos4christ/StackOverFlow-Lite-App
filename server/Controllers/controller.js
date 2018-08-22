@@ -1,4 +1,4 @@
-import allData from '../data.json';
+import allData from '../../data.json';
 
 const { data } = allData;
 const controller = {};
