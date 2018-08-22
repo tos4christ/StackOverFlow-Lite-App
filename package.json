@@ -19,7 +19,7 @@
   "scripts": {
     "build": "babel app -d build",
     "test": "nyc mocha --exit",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "start": "npm run build && mocha build/test/test.js"
   },
   "author": "",
