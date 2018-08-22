@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _data = require('../../server/data.json');
+var _data = require('../../data.json');
 
 var _data2 = _interopRequireDefault(_data);
 

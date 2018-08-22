@@ -8,7 +8,7 @@ const app = express();
 
 app.use(bodyParser.json());
 
-app.use('/questions', router);
+app.use('/api/v1/questions', router);
 
 app.use((req, res, next) => {
     const err = new Error('Not Found');

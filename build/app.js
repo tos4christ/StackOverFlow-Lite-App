@@ -22,7 +22,7 @@ var app = (0, _express2.default)();
 
 app.use(_bodyParser2.default.json());
 
-app.use('/questions', _routes2.default);
+app.use('/api/v1/questions', _routes2.default);
 
 app.use(function (req, res, next) {
     var err = new Error('Not Found');
