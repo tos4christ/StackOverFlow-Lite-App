@@ -19,7 +19,7 @@
     "rimraf": "^2.6.2"
   },
   "scripts": {
-    "test": "mocha",
+    "test": "mocha build/test",
     "build": "babel app -d build"
   },
   "author": "",
