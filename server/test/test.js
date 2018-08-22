@@ -2,7 +2,7 @@
 import request from 'supertest';
 import { describe, it } from 'mocha';
 import app from '../app';
-import allData from '../data.json';
+import allData from '../../data.json';
 
 const { data } = allData;
 const expectedData = data.filter(datas => datas.id !== 1);
