@@ -1,5 +1,18 @@
-[![Build Status](https://travis-ci.org/tos4christ/StackOverFlow-Lite-App.svg?branch=159956003-users-can-get-all-question)](https://travis-ci.org/tos4christ/StackOverFlow-Lite-App)
-[![Coverage Status](https://coveralls.io/repos/github/tos4christ/StackOverFlow-Lite-App/badge.svg?branch=159956003-users-can-get-all-question)](https://coveralls.io/github/tos4christ/StackOverFlow-Lite-App?branch=159956003-users-can-get-all-question)
-
 # StackOverFlow-Lite-App
 A power RestFul API endpoint for a forum front end
+
+#Description of Task to be completed
+Have the following endpoints working
+GET /api/v1/questions
+POST /api/v1/questions
+GET /api/v1/questions/
+GET /api/v1/questions//answers
+GET /api/v1/questions//answers/
+POST /api/v1/questions//answers
+DELETE /api/v1/questions
+
+#How should this be manually tested?
+After cloning the repo run on your node cli
+
+#Using Postman test every endpoint
+key: Content-Type value: application/json

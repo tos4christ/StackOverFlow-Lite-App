@@ -21,7 +21,7 @@
         "build": "babel server -d build",
         "test": "nyc mocha build/test/test.js",
         "coverage": "nyc report --reporter=text-lcov | coveralls",
-        "start": "npm run build && mocha build/test/test.js"
+        "start": "npm run build"
     },
     "author": "",
     "license": "ISC",
