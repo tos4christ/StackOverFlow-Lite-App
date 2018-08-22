@@ -2,9 +2,13 @@
 A power RestFul API endpoint for a forum front end
 
 #Description of Task to be completed
+
 Have the following endpoints working
-GET /api/v1/questions
+
+GET /api/v1/questions  
+
 POST /api/v1/questions
+
 GET /api/v1/questions/
 GET /api/v1/questions//answers
 GET /api/v1/questions//answers/
