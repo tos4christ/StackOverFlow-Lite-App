@@ -20,4 +20,10 @@ app.use((err, req, res) => {
     res.json(err);
 });
 
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+	console.log('App is now listening from Heroku');
+})
+
 export default app;
