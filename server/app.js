@@ -12,18 +12,18 @@ app.use('/api/v1/questions', router);
 
 app.use((req, res, next) => {
     const err = new Error('Not Found');
-    err.status(404);
+    err.status = 404;
     next(err);
 });
 
 app.use((err, req, res) => {
-    res.json(err);
+    res.json(err.message);
 });
 
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
-	console.log('App is now listening from Heroku');
+	console.log(`App is now listening from Heroku on port ${port}`);
 })
 
 export default app;
