@@ -3,15 +3,27 @@ import allData from '../../data.json';
 const { data } = allData;
 const questionController = {};
 
+// function to test IDs are numbers
+const testID = (ID) => {
+    return isNaN(ID*1);
+}
+
 // GET ALL QUESTION
 questionController.getAllQuestion = (req, res) => {
     res.json(data);
 };
 
 // GET SPECIFIC QUESTION ID
-questionController.getAQuestion = (req, res) => {
-    const doc = data.find(c => c.id === parseInt(req.params.qID, 10));
-    res.json(doc);
+questionController.getAQuestion = (req, res, next) => {
+    if(testID(req.params.qID)) {
+        return next(new Error('Specify the question ID i.e questions/<numbers only>'));
+    }
+    const doc = data.find(question => question.id === parseInt(req.params.qID, 10));
+    res.json({
+        message: 'Request is successful',
+        status: 200,
+        data: doc
+    });
 };
 
 // POST A QUESTION

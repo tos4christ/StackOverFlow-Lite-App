@@ -20,7 +20,11 @@ describe('GET /Questions /Answers', () => {
         request(app)
         .get('/api/v1/questions/1')
         .expect(200)
-        .expect(data[0])
+        .expect({
+        message: 'Request is successful',
+        status: 200,
+        data: data[0]
+    })
         .end(done);
     });
 
@@ -29,7 +33,11 @@ describe('GET /Questions /Answers', () => {
         request(app)
         .get('/api/v1/questions/2')
         .expect(200)
-        .expect(data[1])
+        .expect({
+        message: 'Request is successful',
+        status: 200,
+        data: data[1]
+    })
         .end(done);
     });
 
