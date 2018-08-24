@@ -15,12 +15,15 @@ app.use('/api/v1/questions', router);
 
 app.use((req, res, next) => {
     const err = new Error('Not Found');
-    err.status = 404;
+    err.statusCode = 404;
     next(err);
 });
 
-app.use((err, req, res) => {
-    res.json(err.message);
+app.use((err, req, res, next) => {
+    res.json({
+    	message: err.message,
+    	status: err.statusCode
+    });
 });
 
 const port = process.env.PORT || 3000;

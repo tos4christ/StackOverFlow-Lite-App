@@ -22,7 +22,7 @@
         "test": "nyc mocha build/test/test.js --exit",
         "coverage": "nyc report --reporter=text-lcov | coveralls",
         "heroku-postbuild": "npm install",
-        "start": "npm run build && node build/app.js"
+        "start": "npm run build && nodemon build/app.js"
     },
     "engine": {
         "node":"8.4.0"

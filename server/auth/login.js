@@ -7,17 +7,26 @@ const router = express.Router();
 
 
 // Validate User data here
-const validateUserData = (user) => {
+const validUser = (user) => {
 	// do stuff
-	const validUser = typeof user.email === 'string' && user.email.replace(' ','').length > 1 && typeof user.password === 'string' && user.email.replace(' ','').length >= 6;
-	return validUser;
+	const validEmail = typeof user.email === 'string' && user.email.replace(' ','').length > 1 
+	const validPassword = typeof user.password === 'string' && user.email.replace(' ','').length >= 6;
+	return validEmail && validPassword;
 }
 
 // Create route to handle login request
-router.post('/', (req, res) => {
+router.post('/', (req, res, next) => {
+	if(validUser(req.body)){
+		res.json({
+			message: 'User is valid'
+		});
+	} else {
+		return next(new Error('Invalid User'));
+	}
 	res.json({
-		message: 'check'
+		message: 'login route check'
 	});
+
 });
 
 export default router;

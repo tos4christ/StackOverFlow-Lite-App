@@ -6,16 +6,23 @@ const router = express.Router();
 // Users cannot login to the app with a blank or incorrect password
 
 // Validate user data here
-const validateUser = (user) => {
+const validUser = (user) => {
 	// do stuff
-	const validUser = typeof user.email === 'string' && user.email.replace(' ','').length > 1 && typeof user.password === 'string' && user.email.replace(' ','').length >= 6;
-	return validUser;
+	const validUserData = typeof user.email === 'string' && user.email.replace(' ','').length > 1 && typeof user.password === 'string' && user.email.replace(' ','').length >= 6;
+	return validUserData;
 }
 
 // Create route for login here
-router.post('/', (req, res) => {
+router.post('/', (req, res, next) => {
+	if(validUser(req.body)){
+		res.json({
+			message: 'User is valid'
+		});
+	} else {
+		return next(new Error('Invalid User'));
+	}
 	res.json({
-		message: 'check'
+		message: 'signup route check'
 	});
 });
 

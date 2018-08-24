@@ -1,14 +1,14 @@
 {
 "data": [	{
-	"id": 1, "text": "tosin is doing 48 hours shift duty", "answers":[{"text": "this is very true", "vote": 2, "id": 1},{"text": "are you sure?", "id": 2, "vote": 3}]
+	"id": 1, "title": "My story", "description": "What i did to prepare for Andela" ,"text": "tosin is doing 48 hours shift duty", "answers":[{"text": "this is very true", "vote": 2, "id": 1},{"text": "are you sure?", "id": 2, "vote": 3}]
 	},
 
 	{
-	"id": 2, "text": "tosin is doing 48 hours shift duty", "answers":[{"text": "this is very true", "vote": 2, "id": 1},{"text": "are you sure?", "id": 2, "vote": 3}]
+	"id": 2, "title": "My story", "description": "What i did to prepare for Andela" ,"text": "tosin is doing 48 hours shift duty", "answers":[{"text": "this is very true", "vote": 2, "id": 1},{"text": "are you sure?", "id": 2, "vote": 3}]
 	},
 
  	{
- 	"id": 3, "text": "tosin is doing 48 hours shift duty", "answers":[{"text": "this is very true", "vote": 2, "id": 1},{"text": "are you sure?", "id": 2, "vote": 3}]
+ 	"id": 3, "title": "My story", "description": "What i did to prepare for Andela" ,"text": "tosin is doing 48 hours shift duty", "answers":[{"text": "this is very true", "vote": 2, "id": 1},{"text": "are you sure?", "id": 2, "vote": 3}]
  	}
 
 ]
