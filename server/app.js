@@ -1,13 +1,16 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-
 import router from './Routes/routes';
+import signup from './auth/signup';
+import login from './auth/login';
 
 const app = express();
 
 
 app.use(bodyParser.json());
 
+app.use('/auth/signup', signup);
+app.use('/auth/login', login);
 app.use('/api/v1/questions', router);
 
 app.use((req, res, next) => {
