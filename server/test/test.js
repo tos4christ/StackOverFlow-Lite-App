@@ -11,7 +11,11 @@ describe('GET /Questions /Answers', () => {
         request(app)
         .get('/api/v1/questions')
         .expect(200)
-        .expect(data)
+        .expect({
+        message: 'Request is successful',
+        status: 200,
+        data
+    })
         .end(done);
     });
 
@@ -56,7 +60,7 @@ describe('DELETE /Specific Question', () => {
         request(app)
             .delete('/api/v1/questions/1')
             .expect(200)
-            .expect(expectedData)
+            .expect({message: "deleted a question"})
             .end(done);
     });
 });
@@ -70,7 +74,7 @@ describe('POST /Questions /Answers', () => {
         request(app)
             .post('/api/v1/questions')
             .send(body)
-            .expect(200)
+            .expect(201)
             .expect({ id: 4, text: 'This is me' })
             .end(done);
     });
@@ -79,7 +83,7 @@ describe('POST /Questions /Answers', () => {
         request(app)
             .post('/api/v1/questions/1/answers')
             .send(body)
-            .expect(200)
+            .expect(201)
             .expect({ id: 3, text: 'This is me' })
             .end(done);
     });
