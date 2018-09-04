@@ -14,18 +14,24 @@ app.use('/auth/login', login);
 app.use('/api/v1/questions', router);
 
 app.use((req, res, next) => {
-    const err = new Error('Not Found');
-    err.statusCode = 404;
-    next(err);
+	const err = new Error('Such route does not exist');
+	next(err);
 });
 
+
 app.use((err, req, res, next) => {
-    res.json({
+    res.status(404).json({
     	message: err.message,
     	status: err.statusCode
     });
 });
 
+/*
 const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+	console.log(`App is now listening from Heroku on port ${port}`);
+});
+*/
 
 export default app;
